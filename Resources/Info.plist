@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>GearShift</string>
+    <key>CFBundleDisplayName</key>
+    <string>GearShift</string>
+    <key>CFBundleIdentifier</key>
+    <string>app.gearshift.GearShift</string>
+    <key>CFBundleExecutable</key>
+    <string>GearShift</string>
+    <key>CFBundleIconFile</key>
+    <string>GearShift</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>2.1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>GearShift finds your Claude Code session in iTerm or Terminal and types /model and /effort into it.</string>
+</dict>
+</plist>

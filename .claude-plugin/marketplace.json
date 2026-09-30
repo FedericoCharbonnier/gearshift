@@ -1,0 +1,14 @@
+{
+  "name": "gearshift",
+  "owner": {
+    "name": "Federico Charbonnier"
+  },
+  "description": "GearShift: shift Claude Code's model and effort like gears.",
+  "plugins": [
+    {
+      "name": "gearshift",
+      "source": "./",
+      "description": "Shift a running Claude Code session's model and effort like gears, from a small macOS app (Apple Silicon, macOS 14+)."
+    }
+  ]
+}
