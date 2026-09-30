@@ -16,15 +16,18 @@ Inspired by [ModelShift](https://shiftcc.app); not affiliated.
 
 ## Install
 
-In Claude Code:
+One line, in a terminal:
+
+```sh
+claude plugin marketplace add FedericoCharbonnier/gearshift && claude plugin install gearshift@gearshift
+```
+
+or, inside Claude Code, the same two steps:
 
 ```
 /plugin marketplace add FedericoCharbonnier/gearshift
 /plugin install gearshift@gearshift
 ```
-
-or, from a shell: `claude plugin marketplace add FedericoCharbonnier/gearshift` and
-`claude plugin install gearshift@gearshift`.
 
 The plugin holds the `/gearshift:gearshift` skill. The app itself is downloaded the first time you
 run it (see below).
