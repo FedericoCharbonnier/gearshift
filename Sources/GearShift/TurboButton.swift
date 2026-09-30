@@ -2,9 +2,10 @@ import AppKit
 import GearShiftCore
 import SwiftUI
 
-/// A local easter egg: a red TURBO button that asks for a password and then shows an image. It only
-/// appears when `~/Library/Application Support/GearShift/turbo/` holds `image.png` and a `passwords`
-/// file (one accepted password per line). Neither ships with GearShift.
+/// An easter egg: a red TURBO button that asks for a password and then shows an image. The image
+/// ships in the app bundle (`turbo.png`) with built-in passwords. A local
+/// `~/Library/Application Support/GearShift/turbo/` folder replaces either one: `image.png`, and a
+/// `passwords` file with one accepted password per line.
 struct TurboEgg {
     let image: NSImage
     let passwords: TurboPasswords
@@ -13,11 +14,12 @@ struct TurboEgg {
         .appendingPathComponent("GearShift/turbo", isDirectory: true)
 
     static func load() -> TurboEgg? {
-        guard let image = NSImage(contentsOf: directory.appendingPathComponent("image.png")),
-              let text = try? String(contentsOf: directory.appendingPathComponent("passwords"), encoding: .utf8),
-              let passwords = TurboPasswords(fileContents: text)
-        else { return nil }
-        return TurboEgg(image: image, passwords: passwords)
+        let localImage = NSImage(contentsOf: directory.appendingPathComponent("image.png"))
+        let bundledImage = Bundle.main.url(forResource: "turbo", withExtension: "png").flatMap(NSImage.init(contentsOf:))
+        guard let image = localImage ?? bundledImage else { return nil }
+        let localPasswords = (try? String(contentsOf: directory.appendingPathComponent("passwords"), encoding: .utf8))
+            .flatMap(TurboPasswords.init(fileContents:))
+        return TurboEgg(image: image, passwords: localPasswords ?? .builtIn)
     }
 }
 

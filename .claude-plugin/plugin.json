@@ -1,6 +1,6 @@
 {
   "name": "gearshift",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Shift a running Claude Code session's model and effort like gears, from a small macOS app. /gearshift:gearshift connects the session and installs the app on first use.",
   "author": {
     "name": "Federico Charbonnier"

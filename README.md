@@ -72,6 +72,8 @@ shift; turn that off with Settings › "Keep GearShift above other windows".
 Connect as many sessions as you like: the first one is selected, later ones are only announced
 ("‹name› connected") unless nothing is selected; pick one from the green SESSION strip.
 
+**TURBO.** The red button next to Settings asks for a password. Ask around for it.
+
 ## Permissions
 
 - **Accessibility** (System Settings › Privacy & Security › Accessibility), asked for on the first

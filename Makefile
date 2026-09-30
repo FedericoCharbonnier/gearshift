@@ -33,6 +33,8 @@ app:
 	cp Resources/Info.plist $(APP)/Contents/Info.plist
 	swift scripts/make-icon.swift build/GearShift.iconset
 	iconutil --convert icns --output $(APP)/Contents/Resources/GearShift.icns build/GearShift.iconset
+	cp Resources/turbo.png $(APP)/Contents/Resources/turbo.png
+	xattr -cr $(APP)
 	codesign --force --sign "$(SIGN_IDENTITY)" $(APP)
 
 install: app install-skill
